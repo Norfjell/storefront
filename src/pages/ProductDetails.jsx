@@ -1,9 +1,11 @@
 import { useParams, Navigate } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { useCart } from "../context/CartContext";
 
 export default function ProductDetails() {
   const { id } = useParams();
-  const [product, setProduct] = useState(undefined); // differentiate from null
+  const { addToCart } = useCart();
+  const [product, setProduct] = useState(undefined);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -36,7 +38,10 @@ export default function ProductDetails() {
           <h1 className="text-2xl font-bold text-gray-800 mb-2">{product.name}</h1>
           <p className="text-gray-600 mb-4">{product.description}</p>
           <div className="text-xl font-semibold text-indigo-600 mb-4">${product.price}</div>
-          <button className="bg-indigo-500 text-white px-6 py-2 rounded hover:bg-indigo-600">
+          <button
+            onClick={() => addToCart(product)}
+            className="bg-indigo-500 text-white px-6 py-2 rounded hover:bg-indigo-600"
+          >
             Add to Cart
           </button>
         </div>
