@@ -1,20 +1,29 @@
 import { useState } from "react";
+import { useCart } from "../context/CartContext";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { cartItems } = useCart();
+  const cartCount = cartItems.reduce((sum, item) => sum + item.quantity, 0);
 
   return (
     <nav className="bg-white shadow-md px-4 py-3 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         {/* Logo */}
-        <img src="/src/assets/react.svg" alt="Logo" className="h-8" />
+        <Link to="/">
+          <img src="/src/assets/react.svg" alt="Logo" className="h-8" />
+        </Link>
 
         {/* Desktop menu */}
         <div className="hidden md:flex space-x-6 text-gray-700 font-medium">
-          <a href="#" className="hover:text-indigo-500">Home</a>
-          <a href="#" className="hover:text-indigo-500">Products</a>
-          <a href="#" className="hover:text-indigo-500">About</a>
-          <a href="#" className="hover:text-indigo-500">Contact</a>
+          <Link to="/" className="hover:text-indigo-500">Home</Link>
+          <Link to="/" className="hover:text-indigo-500">Products</Link>
+          <Link to="#" className="hover:text-indigo-500">About</Link>
+          <Link to="#" className="hover:text-indigo-500">Contact</Link>
+          <Link to="#" className="hover:text-indigo-500">
+            🛒 Cart {cartCount > 0 && <span className="text-sm text-white bg-indigo-500 px-2 py-0.5 rounded-full ml-1">{cartCount}</span>}
+          </Link>
         </div>
 
         {/* Mobile menu toggle */}
@@ -37,10 +46,13 @@ export default function Navbar() {
       {/* Mobile dropdown menu */}
       {isMobileMenuOpen && (
         <div className="md:hidden mt-2 space-y-2 px-4 text-gray-700 font-medium">
-          <a href="#" className="block hover:text-indigo-500">Home</a>
-          <a href="#" className="block hover:text-indigo-500">Products</a>
-          <a href="#" className="block hover:text-indigo-500">About</a>
-          <a href="#" className="block hover:text-indigo-500">Contact</a>
+          <Link to="/" className="block hover:text-indigo-500">Home</Link>
+          <Link to="/" className="block hover:text-indigo-500">Products</Link>
+          <Link to="#" className="block hover:text-indigo-500">About</Link>
+          <Link to="#" className="block hover:text-indigo-500">Contact</Link>
+          <Link to="#" className="block hover:text-indigo-500">
+            🛒 Cart {cartCount > 0 && <span className="ml-1 text-sm text-white bg-indigo-500 px-2 py-0.5 rounded-full">{cartCount}</span>}
+          </Link>
         </div>
       )}
     </nav>
