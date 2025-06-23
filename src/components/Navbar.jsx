@@ -21,7 +21,7 @@ export default function Navbar() {
           <Link to="/" className="hover:text-indigo-500">Products</Link>
           <Link to="#" className="hover:text-indigo-500">About</Link>
           <Link to="#" className="hover:text-indigo-500">Contact</Link>
-          <Link to="#" className="hover:text-indigo-500">
+          <Link to="/cart" className="hover:text-indigo-500">
             🛒 Cart {cartCount > 0 && <span className="text-sm text-white bg-indigo-500 px-2 py-0.5 rounded-full ml-1">{cartCount}</span>}
           </Link>
         </div>
@@ -50,7 +50,7 @@ export default function Navbar() {
           <Link to="/" className="block hover:text-indigo-500">Products</Link>
           <Link to="#" className="block hover:text-indigo-500">About</Link>
           <Link to="#" className="block hover:text-indigo-500">Contact</Link>
-          <Link to="#" className="block hover:text-indigo-500">
+          <Link to="/cart" className="block hover:text-indigo-500">
             🛒 Cart {cartCount > 0 && <span className="ml-1 text-sm text-white bg-indigo-500 px-2 py-0.5 rounded-full">{cartCount}</span>}
           </Link>
         </div>
