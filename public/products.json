@@ -19,5 +19,26 @@
     "description": "Durable and spacious backpack for travel.",
     "price": 49.99,
     "image": "/images/backpack.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Running Shoes",
+    "description": "Comfortable and stylish running shoes.",
+    "price": 89.99,
+    "image": "/images/shoes.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Workout T-Shirt",
+    "description": "Breathable fabric for workouts.",
+    "price": 29.99,
+    "image": "/images/tshirt.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Backpack",
+    "description": "Durable and spacious backpack for travel.",
+    "price": 49.99,
+    "image": "/images/backpack.jpg"
   }
 ]
