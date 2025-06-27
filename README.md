@@ -25,6 +25,7 @@ src/
 - context/ # CartContext with useReducer
 - App.jsx # Main app layout
 - main.jsx # Entry point
+
 public/
 - images/ # Product images
 - products.json # Mock product data
