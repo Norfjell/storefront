@@ -19,16 +19,15 @@ A modern e-commerce storefront built with **React.js**, **Vite**, and **Tailwind
 ## 📂 Folder Structure
 
 src/
-├── assets/ # Static images, logos
-├── components/ # Reusable components (Navbar, Footer, ProductCard, etc.)
-├── pages/ # Main pages (Home, ProductDetails, Cart)
-├── context/ # CartContext with useReducer
-├── data/ # Local product data (optional)
-├── App.jsx # Main app layout
-├── main.jsx # Entry point
+- assets/ # Static images, logos
+- components/ # Reusable components (Navbar, Footer, ProductCard, etc.)
+- pages/ # Main pages (Home, ProductDetails, Cart)
+- context/ # CartContext with useReducer
+- App.jsx # Main app layout
+- main.jsx # Entry point
 public/
-├── images/ # Product images
-├── products.json # Mock product data
+- images/ # Product images
+- products.json # Mock product data
 
 ## Tech Stack
 
