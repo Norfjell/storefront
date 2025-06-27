@@ -1,12 +1,64 @@
-# React + Vite
+# React Mini Storefront
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern e-commerce storefront built with **React.js**, **Vite**, and **Tailwind CSS**, featuring a mock product catalog, shopping cart with localStorage, responsive design, and real-time weather widget.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+-  Built with React + Vite
+-  Styled using Tailwind CSS
+-  Add to Cart functionality with quantity controls
+-  Cart persistence via `localStorage`
+-  Product detail pages with dynamic routing
+-  Product loading skeleton
+-  Navigation with mobile responsiveness
+-  Product recommendation carousel (mocked)
+-  Weather & location widget (OpenWeatherMap API)
+-  Newsletter form (frontend only)
+-  Fully responsive design
 
-## Expanding the ESLint configuration
+## 📂 Folder Structure
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+src/
+├── assets/ # Static images, logos
+├── components/ # Reusable components (Navbar, Footer, ProductCard, etc.)
+├── pages/ # Main pages (Home, ProductDetails, Cart)
+├── context/ # CartContext with useReducer
+├── data/ # Local product data (optional)
+├── App.jsx # Main app layout
+├── main.jsx # Entry point
+public/
+├── images/ # Product images
+├── products.json # Mock product data
+
+## Tech Stack
+
+- React.js (Vite)
+- Tailwind CSS
+- React Router
+- React Icons
+- OpenWeatherMap API
+- LocalStorage
+- JSON for mock data
+
+## Getting Started
+
+1. **Clone the repo**
+
+git clone https://github.com/yourusername/storefront.git
+cd storefront
+
+2. **Install dependencies**
+npm install
+
+3. **Start the dev server**
+npm run dev
+
+4. **Build for production**
+npm run build
+
+
+Environment Variables
+To use the weather widget, add a .env file in the root:
+VITE_OPENWEATHER_API_KEY=your_api_key_here (you can get one from https://openweathermap.org/)
+
+![Homepage screenshot](public/screenshots/homepage.png "Homepage")
