@@ -25,7 +25,7 @@ export default function Navbar() {
           <Link to="/" className="hover:text-indigo-500">Home</Link>
           <Link to="/products" className="hover:text-indigo-500">Products</Link>
           <Link to="#" className="hover:text-indigo-500">About</Link>
-          <Link to="#" className="hover:text-indigo-500">Contact</Link>
+          <Link to="/contact" className="hover:text-indigo-500">Contact</Link>
           <Link to="/cart" className="flex items-center hover:text-indigo-500 relative">
             <FaShoppingCart className="text-2xl" />
             {cartCount > 0 && (
@@ -59,7 +59,7 @@ export default function Navbar() {
           <Link to="/" className="block hover:text-indigo-500">Home</Link>
           <Link to="/" className="block hover:text-indigo-500">Products</Link>
           <Link to="#" className="block hover:text-indigo-500">About</Link>
-          <Link to="#" className="block hover:text-indigo-500">Contact</Link>
+          <Link to="/contact" className="block hover:text-indigo-500">Contact</Link>
           <Link to="/cart" className="flex items-center hover:text-indigo-500 relative">
             <FaShoppingCart className="text-2xl" />
             {cartCount > 0 && (
