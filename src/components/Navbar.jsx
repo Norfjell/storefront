@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useCart } from "../context/CartContext";
 import { Link } from "react-router-dom";
 import WeatherWidget from "./WeatherWidget";
+import { FaShoppingCart } from "react-icons/fa";
 
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -12,11 +13,11 @@ export default function Navbar() {
     <nav className="bg-white shadow-md px-4 py-3 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <div className="flex items-center gap-4">
-        {/* Logo */}
-        <Link to="/">
-          <img src="/src/assets/react.svg" alt="Logo" className="h-8" />
-        </Link>
-        <WeatherWidget />
+          {/* Logo */}
+          <Link to="/">
+            <img src="/src/assets/react.svg" alt="Logo" className="h-8" />
+          </Link>
+          <WeatherWidget />
         </div>
 
         {/* Desktop menu */}
@@ -25,8 +26,13 @@ export default function Navbar() {
           <Link to="/products" className="hover:text-indigo-500">Products</Link>
           <Link to="#" className="hover:text-indigo-500">About</Link>
           <Link to="#" className="hover:text-indigo-500">Contact</Link>
-          <Link to="/cart" className="hover:text-indigo-500">
-            🛒 Cart {cartCount > 0 && <span className="text-sm text-white bg-indigo-500 px-2 py-0.5 rounded-full ml-1">{cartCount}</span>}
+          <Link to="/cart" className="flex items-center hover:text-indigo-500 relative">
+            <FaShoppingCart className="text-2xl" />
+            {cartCount > 0 && (
+              <span className="absolute -top-2 -right-3 bg-indigo-500 text-white text-xs font-semibold rounded-full px-2 py-0.5">
+                {cartCount}
+              </span>
+            )}
           </Link>
         </div>
 
@@ -54,8 +60,13 @@ export default function Navbar() {
           <Link to="/" className="block hover:text-indigo-500">Products</Link>
           <Link to="#" className="block hover:text-indigo-500">About</Link>
           <Link to="#" className="block hover:text-indigo-500">Contact</Link>
-          <Link to="/cart" className="block hover:text-indigo-500">
-            🛒 Cart {cartCount > 0 && <span className="ml-1 text-sm text-white bg-indigo-500 px-2 py-0.5 rounded-full">{cartCount}</span>}
+          <Link to="/cart" className="flex items-center hover:text-indigo-500 relative">
+            <FaShoppingCart className="text-2xl" />
+            {cartCount > 0 && (
+              <span className="absolute -top-2 left-3 bg-indigo-500 text-white text-xs font-semibold rounded-full px-2 py-0.5">
+                {cartCount}
+              </span>
+            )}
           </Link>
         </div>
       )}

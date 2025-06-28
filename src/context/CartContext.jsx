@@ -9,6 +9,11 @@ export function CartProvider({ children }) {
         return stored ? JSON.parse(stored) : [];
     });
 
+    const cartTotal = cartItems.reduce(
+        (acc, item) => acc + item.price * item.quantity,
+        0
+    );
+
     useEffect(() => {
         localStorage.setItem("cart", JSON.stringify(cartItems));
     }, [cartItems]);
@@ -71,6 +76,7 @@ export function CartProvider({ children }) {
                 increaseQty,
                 decreaseQty,
                 clearCart,
+                cartTotal,
             }}
         >
             {children}
