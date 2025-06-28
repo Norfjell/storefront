@@ -79,6 +79,15 @@ export default function CartPage() {
           ))}
 
           <div className="flex justify-between items-center pt-6 text-xl font-bold">
+            {total >= 200 ? (
+              <div className="bg-green-100 text-green-800 px-4 py-2 rounded border border-green-300 text-sm">
+                Congrats! You've unlocked <strong>free shipping</strong>!
+              </div>
+            ) : (
+              <div className="bg-yellow-100 text-yellow-800 px-4 py-2 rounded border border-yellow-300 text-sm">
+                Spend <strong>${(200 - total).toFixed(2)}</strong> more to get <strong>free shipping</strong>!
+              </div>
+            )}
             <span>Total:</span>
             <span>${total.toFixed(2)}</span>
           </div>
