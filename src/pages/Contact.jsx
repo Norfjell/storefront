@@ -26,7 +26,7 @@ export default function Contact() {
   return (
     <div>
       {/* Banner Hero */}
-      <div className="relative h-90 bg-cover bg-center" style={{ backgroundImage: `url(${contactBanner})` }}>
+      <div className="relative h-[45vh] object-cover bg-center" style={{ backgroundImage: `url(${contactBanner})` }}>
         <div className="absolute inset-0 flex items-center justify-center">
           <h1 className="text-white text-4xl font-bold">Customer Care</h1>
         </div>
@@ -87,4 +87,4 @@ export default function Contact() {
       </div>
     </div>
   );
-} 
+}
