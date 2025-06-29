@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useCart } from "../context/CartContext";
 import { Link } from "react-router-dom";
 import WeatherWidget from "./WeatherWidget";
+import logo from "../assets/logo.svg";
 import { FaShoppingCart } from "react-icons/fa";
 
 export default function Navbar() {
@@ -15,7 +16,7 @@ export default function Navbar() {
         <div className="flex items-center gap-4">
           {/* Logo */}
           <Link to="/">
-            <img src="/src/assets/react.svg" alt="Logo" className="h-8" />
+            <img src={logo} alt="Logo" className="h-8" />
           </Link>
           <WeatherWidget />
         </div>
