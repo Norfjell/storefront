@@ -4,6 +4,7 @@
     "name": "Running Shoes",
     "description": "Comfortable and stylish running shoes.",
     "price": 89.99,
+    "category": "men",
     "image": "/images/shoes.jpg"
   },
   {
@@ -11,6 +12,7 @@
     "name": "Workout T-Shirt",
     "description": "Breathable fabric for workouts.",
     "price": 29.99,
+    "category": "men",
     "image": "/images/tshirt.jpg"
   },
   {
@@ -18,6 +20,7 @@
     "name": "Backpack",
     "description": "Durable and spacious backpack for travel.",
     "price": 49.99,
+    "category": "women",
     "image": "/images/backpack.jpg"
   },
   {
@@ -25,6 +28,7 @@
     "name": "Running Shoes",
     "description": "Comfortable and stylish running shoes.",
     "price": 89.99,
+    "category": "women",
     "image": "/images/shoes.jpg"
   },
   {
@@ -32,6 +36,7 @@
     "name": "Workout T-Shirt",
     "description": "Breathable fabric for workouts.",
     "price": 29.99,
+    "category": "women",
     "image": "/images/tshirt.jpg"
   },
   {
@@ -39,6 +44,7 @@
     "name": "Backpack",
     "description": "Durable and spacious backpack for travel.",
     "price": 49.99,
+    "category": "men",
     "image": "/images/backpack.jpg"
   }
 ]
