@@ -1,4 +1,5 @@
- import { useState } from "react";
+import { useState, useRef } from "react";
+import ReCAPTCHA from "react-google-recaptcha";
 import contactBanner from "../assets/hero-contact.jpg";
 
 export default function Contact() {
@@ -9,6 +10,8 @@ export default function Contact() {
   });
 
   const [submitted, setSubmitted] = useState(false);
+  const [captchaVerified, setCaptchaVerified] = useState(false);
+  const recaptchaRef = useRef(null);
 
   const handleChange = (e) => {
     setFormData((prev) => ({
@@ -17,17 +20,28 @@ export default function Contact() {
     }));
   };
 
+  const handleCaptcha = (value) => {
+    if (value) setCaptchaVerified(true);
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    if (!captchaVerified) {
+      alert("Please complete the reCAPTCHA.");
+      return;
+    }
+
     console.log("Form submitted:", formData);
     setSubmitted(true);
+    recaptchaRef.current.reset(); // Optional: reset captcha after submit
   };
 
   return (
     <div>
       {/* Banner Hero */}
       <div className="relative h-[45vh] object-cover bg-center" style={{ backgroundImage: `url(${contactBanner})` }}>
-        <div className="absolute inset-0 flex items-center justify-center">
+        <div className="absolute inset-0 bg-black/60 flex items-center justify-center">
           <h1 className="text-white text-4xl font-bold">Customer Care</h1>
         </div>
       </div>
@@ -75,6 +89,13 @@ export default function Contact() {
                 className="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500"
               />
             </div>
+
+            {/* reCAPTCHA */}
+            <ReCAPTCHA
+              sitekey={import.meta.env.VITE_ReCAPTCHA_SITE_KEY}
+              onChange={handleCaptcha}
+              ref={recaptchaRef}
+            />
 
             <button
               type="submit"
