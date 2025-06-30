@@ -59,6 +59,8 @@ export default function Navbar() {
         <div className="md:hidden mt-2 space-y-2 px-4 text-gray-700 font-medium">
           <Link to="/" className="block hover:text-indigo-500">Home</Link>
           <Link to="/products" className="block hover:text-indigo-500">Products</Link>
+          <Link to="/products/men" className="hover:text-indigo-500">Men</Link>
+          <Link to="/products/women" className="hover:text-indigo-500">Women</Link>
           <Link to="#" className="block hover:text-indigo-500">About</Link>
           <Link to="/contact" className="block hover:text-indigo-500">Contact</Link>
           <Link to="/cart" className="flex items-center hover:text-indigo-500 relative">
