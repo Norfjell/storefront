@@ -25,7 +25,7 @@ export default function Navbar() {
         <div className="hidden md:flex space-x-6 text-gray-700 font-medium">
           <Link to="/" className="hover:text-indigo-500">Home</Link>
           <Link to="/products" className="hover:text-indigo-500">Products</Link>
-          <Link to="#" className="hover:text-indigo-500">About</Link>
+          <Link to="/about" className="hover:text-indigo-500">About</Link>
           <Link to="/contact" className="hover:text-indigo-500">Contact</Link>
           <Link to="/cart" className="flex items-center hover:text-indigo-500 relative">
             <FaShoppingCart className="text-2xl" />
@@ -61,7 +61,7 @@ export default function Navbar() {
           <Link to="/products" className="block hover:text-indigo-500">Products</Link>
           <Link to="/products/men" className="hover:text-indigo-500">Men</Link>
           <Link to="/products/women" className="hover:text-indigo-500">Women</Link>
-          <Link to="#" className="block hover:text-indigo-500">About</Link>
+          <Link to="/about" className="block hover:text-indigo-500">About</Link>
           <Link to="/contact" className="block hover:text-indigo-500">Contact</Link>
           <Link to="/cart" className="flex items-center hover:text-indigo-500 relative">
             <FaShoppingCart className="text-2xl" />
