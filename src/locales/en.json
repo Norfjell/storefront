@@ -1,0 +1,72 @@
+{
+    "footer": {
+        "subscribeHeading": "Subscribe to our Newsletter",
+        "emailPlaceholder": "Your email",
+        "subscribeButton": "Subscribe",
+        "privacy": "Privacy Policy",
+        "terms": "Terms of Service",
+        "contact": "Contact",
+        "copyright": "All rights reserved."
+    },
+    "hero": {
+        "title": "Upgrade Your Style with Modern Gear",
+        "description": "Shop our curated collection of high-performance products — built for comfort, style, and everyday adventure.",
+        "button": "Shop Now"
+    },
+    "reviews": {
+        "title": "What Our Customers Are Saying",
+        "testimonials": [
+            {
+                "name": "Sarah M.",
+                "image": "https://randomuser.me/api/portraits/women/68.jpg",
+                "review": "Absolutely love the quality! Shipping was super fast and the fit is perfect. Will definitely buy again."
+            },
+            {
+                "name": "James P.",
+                "image": "https://randomuser.me/api/portraits/men/35.jpg",
+                "review": "Great experience! The site is smooth and intuitive. The customer service team was also very helpful."
+            },
+            {
+                "name": "Emily R.",
+                "image": "https://randomuser.me/api/portraits/women/12.jpg",
+                "review": "Stylish and comfortable — just what I was looking for. The design feels premium and well-made."
+            }
+        ]
+    },
+    "navbar": {
+        "home": "Home",
+        "products": "Products",
+        "about": "About",
+        "contact": "Contact",
+        "cart": "Cart",
+        "men": "Men",
+        "women": "Women"
+    },
+    "cart": {
+        "title": "Your Cart",
+        "empty": "Your cart is empty.",
+        "goShopping": "Go shopping →",
+        "remove": "Remove",
+        "congrats": "Congrats! You've unlocked",
+        "freeShipping": "free shipping",
+        "spendMore": "Spend",
+        "moreToFreeShipping": "more to get",
+        "total": "Total:",
+        "checkout": "Checkout",
+        "checkoutSuccess": "Checkout successful (mock)!"
+    },
+    "contact": {
+        "title": "Customer Care",
+        "name": "Name",
+        "email": "Email",
+        "message": "Message",
+        "submit": "Send Message",
+        "thankYou": "Thank you! We’ll get back to you shortly.",
+        "captchaAlert": "Please complete the reCAPTCHA."
+    },
+    "notFound": {
+        "title": "404 - Page Not Found",
+        "message": "Sorry, the page you're looking for doesn't exist.",
+        "home": "Back to Home"
+    }
+}

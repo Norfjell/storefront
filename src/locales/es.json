@@ -1,0 +1,72 @@
+{
+    "footer": {
+        "subscribeHeading": "Suscríbete a nuestro boletín",
+        "emailPlaceholder": "Tu correo electrónico",
+        "subscribeButton": "Suscribirse",
+        "privacy": "Política de privacidad",
+        "terms": "Términos del servicio",
+        "contact": "Contacto",
+        "copyright": "Todos los derechos reservados."
+    },
+    "hero": {
+        "title": "Mejora tu estilo con equipamiento moderno",
+        "description": "Compra nuestra colección de productos de alto rendimiento — diseñados para la comodidad, el estilo y la aventura diaria.",
+        "button": "Comprar ahora"
+    },
+    "reviews": {
+        "title": "Lo que dicen nuestros clientes",
+        "testimonials": [
+            {
+                "name": "Sarah M.",
+                "image": "https://randomuser.me/api/portraits/women/68.jpg",
+                "review": "¡Me encanta la calidad! El envío fue muy rápido y el ajuste es perfecto. Definitivamente compraré de nuevo."
+            },
+            {
+                "name": "James P.",
+                "image": "https://randomuser.me/api/portraits/men/35.jpg",
+                "review": "¡Gran experiencia! El sitio es fluido e intuitivo. El servicio al cliente también fue muy servicial."
+            },
+            {
+                "name": "Emily R.",
+                "image": "https://randomuser.me/api/portraits/women/12.jpg",
+                "review": "Elegante y cómodo — justo lo que buscaba. El diseño se siente premium y bien hecho."
+            }
+        ]
+    },
+    "navbar": {
+        "home": "Inicio",
+        "products": "Productos",
+        "about": "Acerca de",
+        "contact": "Contacto",
+        "cart": "Carrito",
+        "men": "Hombres",
+        "women": "Mujeres"
+    },
+    "cart": {
+        "title": "Tu Carrito",
+        "empty": "Tu carrito está vacío.",
+        "goShopping": "Ir de compras →",
+        "remove": "Eliminar",
+        "congrats": "¡Felicidades! Has desbloqueado",
+        "freeShipping": "envío gratis",
+        "spendMore": "Gasta",
+        "moreToFreeShipping": "más para obtener",
+        "total": "Total:",
+        "checkout": "Pagar",
+        "checkoutSuccess": "¡Compra exitosa (simulada)!"
+    },
+    "contact": {
+        "title": "Atención al Cliente",
+        "name": "Nombre",
+        "email": "Correo electrónico",
+        "message": "Mensaje",
+        "submit": "Enviar mensaje",
+        "thankYou": "¡Gracias! Nos pondremos en contacto contigo pronto.",
+        "captchaAlert": "Por favor, complete el reCAPTCHA."
+    },
+    "notFound": {
+        "title": "404 - Página No Encontrada",
+        "message": "Lo sentimos, la página que estás buscando no existe.",
+        "home": "Volver a Inicio"
+    }
+}

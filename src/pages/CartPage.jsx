@@ -1,5 +1,12 @@
 import { useCart } from "../context/CartContext";
+import { useLanguage } from "../context/LanguageContext";
 import { Link } from "react-router-dom";
+
+import en from "../locales/en.json";
+import fr from "../locales/fr.json";
+import es from "../locales/es.json";
+
+const translations = { en, fr, es };
 
 export default function CartPage() {
   const {
@@ -9,6 +16,8 @@ export default function CartPage() {
     decreaseQty,
     clearCart,
   } = useCart();
+  const { language } = useLanguage();
+  const t = translations[language]?.cart || translations.en.cart;
 
   const total = cartItems.reduce(
     (sum, item) => sum + item.price * item.quantity,
@@ -16,19 +25,19 @@ export default function CartPage() {
   );
 
   const handleCheckout = () => {
-    alert("Checkout successful (mock)!");
+    alert(t.checkoutSuccess);
     clearCart();
   };
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold mb-6">Your Cart</h1>
+      <h1 className="text-3xl font-bold mb-6">{t.title}</h1>
 
       {cartItems.length === 0 ? (
         <div className="text-gray-600">
-          Your cart is empty.{" "}
+          {t.empty}{" "}
           <Link to="/" className="text-indigo-600 hover:underline">
-            Go shopping →
+            {t.goShopping}
           </Link>
         </div>
       ) : (
@@ -72,7 +81,7 @@ export default function CartPage() {
                   onClick={() => removeFromCart(item.id)}
                   className="text-red-500 text-sm hover:underline mt-2"
                 >
-                  Remove
+                  {t.remove}
                 </button>
               </div>
             </div>
@@ -81,14 +90,14 @@ export default function CartPage() {
           <div className="flex justify-between items-center pt-6 text-xl font-bold">
             {total >= 200 ? (
               <div className="bg-green-100 text-green-800 px-4 py-2 rounded border border-green-300 text-sm">
-                Congrats! You've unlocked <strong>free shipping</strong>!
+                {t.congrats} <strong>{t.freeShipping}</strong>!
               </div>
             ) : (
               <div className="bg-yellow-100 text-yellow-800 px-4 py-2 rounded border border-yellow-300 text-sm">
-                Spend <strong>${(200 - total).toFixed(2)}</strong> more to get <strong>free shipping</strong>!
+                {t.spendMore} <strong>${(200 - total).toFixed(2)}</strong> {t.moreToFreeShipping} <strong>{t.freeShipping}</strong>!
               </div>
             )}
-            <span>Total:</span>
+            <span>{t.total}</span>
             <span>${total.toFixed(2)}</span>
           </div>
 
@@ -97,7 +106,7 @@ export default function CartPage() {
               onClick={handleCheckout}
               className="mt-4 px-6 py-2 bg-indigo-600 text-white rounded hover:bg-indigo-700"
             >
-              Checkout
+              {t.checkout}
             </button>
           </div>
         </div>
