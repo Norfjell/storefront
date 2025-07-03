@@ -10,7 +10,7 @@
     },
     "hero": {
         "title": "Upgrade Your Style with Modern Gear",
-        "description": "Shop our curated collection of high-performance products — built for comfort, style, and everyday adventure.",
+        "description": "Shop our curated collection of high-performance products, built for comfort, style, and everyday adventure.",
         "button": "Shop Now"
     },
     "reviews": {
@@ -68,5 +68,39 @@
         "title": "404 - Page Not Found",
         "message": "Sorry, the page you're looking for doesn't exist.",
         "home": "Back to Home"
+    },
+    "productDetails": {
+        "back": "← Back to Products",
+        "loading": "Loading product...",
+        "addToCart": "Add to Cart"
+    },
+    "about": {
+        "title": "About Us",
+        "intro": [
+            "Welcome to <strong>Modern Threads</strong>, your destination for curated, high-quality fashion for men and women. We believe clothing should not only look good but feel good, too.",
+            "Founded in 2024, our goal has been to make premium style accessible, sustainable, and simple to shop. Whether you’re dressing up for a night out or staying comfy at home, we’ve designed every piece with versatility and confidence in mind.",
+            "Our storefront is more than just a product catalog — it’s a fully responsive, developer-built e-commerce demo powered by modern tools like <strong>React, Tailwind CSS, React Router</strong> and hosted on <strong>Vercel</strong>. This platform showcases my design thinking, frontend architecture, and UX focus.",
+            "This project reflects my passion for clean code, performance-first design, and delightful customer experiences."
+        ],
+        "valuesTitle": "Our Values",
+        "values": [
+            "Style that feels like you",
+            "Sustainability and ethical sourcing",
+            "Simplicity, accessibility & usability",
+            "Built with performance-first design in mind"
+        ]
+    },
+    "products": {
+        "title": {
+            "all": "All Products",
+            "men": "Men's Products",
+            "women": "Women's Products"
+        },
+        "filters": {
+            "all": "All",
+            "men": "Men",
+            "women": "Women"
+        },
+        "loading": "Loading products..."
     }
 }

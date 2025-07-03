@@ -10,7 +10,7 @@
     },
     "hero": {
         "title": "Mejora tu estilo con equipamiento moderno",
-        "description": "Compra nuestra colección de productos de alto rendimiento — diseñados para la comodidad, el estilo y la aventura diaria.",
+        "description": "Compra nuestra colección de productos de alto rendimiento, diseñados para la comodidad, el estilo y la aventura diaria.",
         "button": "Comprar ahora"
     },
     "reviews": {
@@ -68,5 +68,39 @@
         "title": "404 - Página No Encontrada",
         "message": "Lo sentimos, la página que estás buscando no existe.",
         "home": "Volver a Inicio"
+    },
+    "productDetails": {
+        "back": "← Volver a Productos",
+        "loading": "Cargando producto...",
+        "addToCart": "Agregar al Carrito"
+    },
+    "about": {
+        "title": "Sobre Nosotros",
+        "intro": [
+            "Bienvenido a <strong>Modern Threads</strong>, tu destino para moda curada y de alta calidad para hombres y mujeres. Creemos que la ropa no solo debe verse bien, sino también sentirse bien.",
+            "Fundada en 2024, nuestro objetivo ha sido hacer que el estilo premium sea accesible, sostenible y fácil de comprar. Ya sea que te vistas para una noche o te quedes cómodo en casa, hemos diseñado cada prenda con versatilidad y confianza en mente.",
+            "Nuestra tienda es más que un catálogo de productos: es una demo de comercio electrónico totalmente responsiva, desarrollada con herramientas modernas como <strong>React, Tailwind CSS, React Router</strong> y alojada en <strong>Vercel</strong>. Esta plataforma muestra mi pensamiento de diseño, arquitectura frontend y enfoque en la experiencia del usuario.",
+            "Este proyecto refleja mi pasión por un código limpio, diseño orientado al rendimiento y experiencias de cliente encantadoras."
+        ],
+        "valuesTitle": "Nuestros valores",
+        "values": [
+            "Estilo que se siente como tú",
+            "Sostenibilidad y abastecimiento ético",
+            "Simplicidad, accesibilidad y usabilidad",
+            "Construido con un diseño enfocado en el rendimiento"
+        ]
+    },
+    "products": {
+        "title": {
+            "all": "Todos los productos",
+            "men": "Productos para hombres",
+            "women": "Productos para mujeres"
+        },
+        "filters": {
+            "all": "Todos",
+            "men": "Hombres",
+            "women": "Mujeres"
+        },
+        "loading": "Cargando productos..."
     }
 }

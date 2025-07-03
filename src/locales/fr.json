@@ -10,7 +10,7 @@
     },
     "hero": {
         "title": "Améliorez votre style avec des équipements modernes",
-        "description": "Découvrez notre collection de produits haute performance — conçus pour le confort, le style et l'aventure quotidienne.",
+        "description": "Découvrez notre collection de produits haute performance, conçus pour le confort, le style et l'aventure quotidienne.",
         "button": "Acheter"
     },
     "reviews": {
@@ -68,5 +68,39 @@
         "title": "404 - Page non trouvée",
         "message": "Désolé, la page que vous recherchez n'existe pas.",
         "home": "Retour à l'accueil"
+    },
+    "productDetails": {
+        "back": "← Retour aux produits",
+        "loading": "Chargement du produit...",
+        "addToCart": "Ajouter au panier"
+    },
+    "about": {
+        "title": "À propos de nous",
+        "intro": [
+            "Bienvenue chez <strong>Modern Threads</strong> votre destination pour la mode de qualité, soigneusement sélectionnée pour hommes et femmes. Nous croyons que les vêtements ne doivent pas seulement être beaux, mais aussi agréables à porter.",
+            "Fondée en 2024, notre objectif est de rendre le style premium accessible, durable et simple à acheter. Que vous vous habilliez pour une soirée ou que vous restiez confortable à la maison, chaque pièce est conçue pour la polyvalence et la confiance en soi.",
+            "Notre vitrine est plus qu’un simple catalogue de produits, c’est une démo e-commerce entièrement responsive, développée avec des outils modernes comme <strong>React, Tailwind CSS, React Router</strong> et hébergée sur <strong>Vercel</strong>. Cette plateforme met en avant ma réflexion sur le design, l’architecture frontend, et l’expérience utilisateur.",
+            "Ce projet reflète ma passion pour un code propre, un design axé sur la performance, et des expériences clients agréables."
+        ],
+        "valuesTitle": "Nos valeurs",
+        "values": [
+            "Un style qui vous ressemble",
+            "Durabilité et approvisionnement éthique",
+            "Simplicité, accessibilité & convivialité",
+            "Conçu avec une approche axée sur la performance"
+        ]
+    },
+    "products": {
+        "title": {
+            "all": "Tous les produits",
+            "men": "Produits pour hommes",
+            "women": "Produits pour femmes"
+        },
+        "filters": {
+            "all": "Tous",
+            "men": "Hommes",
+            "women": "Femmes"
+        },
+        "loading": "Chargement des produits..."
     }
 }
