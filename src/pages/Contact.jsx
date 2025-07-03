@@ -2,6 +2,13 @@ import { useState, useRef } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 import contactBanner from "../assets/hero-contact.jpg";
 
+import { useLanguage } from "../context/LanguageContext";
+import en from "../locales/en.json";
+import fr from "../locales/fr.json";
+import es from "../locales/es.json";
+
+const translations = { en, fr, es };
+
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: "",
@@ -12,6 +19,9 @@ export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
   const [captchaVerified, setCaptchaVerified] = useState(false);
   const recaptchaRef = useRef(null);
+
+  const { language } = useLanguage();
+  const t = translations[language]?.contact || translations.en.contact;
 
   const handleChange = (e) => {
     setFormData((prev) => ({
@@ -28,21 +38,24 @@ export default function Contact() {
     e.preventDefault();
 
     if (!captchaVerified) {
-      alert("Please complete the reCAPTCHA.");
+      alert(t.captchaAlert);
       return;
     }
 
     console.log("Form submitted:", formData);
     setSubmitted(true);
-    recaptchaRef.current.reset(); // Optional: reset captcha after submit
+    recaptchaRef.current.reset();
   };
 
   return (
     <div>
       {/* Banner Hero */}
-      <div className="relative h-[45vh] object-cover bg-center" style={{ backgroundImage: `url(${contactBanner})` }}>
+      <div
+        className="relative h-[45vh] object-cover bg-center"
+        style={{ backgroundImage: `url(${contactBanner})` }}
+      >
         <div className="absolute inset-0 bg-black/60 flex items-center justify-center">
-          <h1 className="text-white text-4xl font-bold">Customer Care</h1>
+          <h1 className="text-white text-4xl font-bold">{t.title}</h1>
         </div>
       </div>
 
@@ -50,12 +63,14 @@ export default function Contact() {
       <div className="max-w-3xl mx-auto px-4 py-10">
         {submitted ? (
           <div className="bg-green-100 text-green-800 px-4 py-3 rounded shadow">
-            Thank you! We’ll get back to you shortly.
+            {t.thankYou}
           </div>
         ) : (
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
-              <label className="block mb-1 font-medium text-gray-700">Name</label>
+              <label className="block mb-1 font-medium text-gray-700">
+                {t.name}
+              </label>
               <input
                 type="text"
                 name="name"
@@ -67,7 +82,9 @@ export default function Contact() {
             </div>
 
             <div>
-              <label className="block mb-1 font-medium text-gray-700">Email</label>
+              <label className="block mb-1 font-medium text-gray-700">
+                {t.email}
+              </label>
               <input
                 type="email"
                 name="email"
@@ -79,7 +96,9 @@ export default function Contact() {
             </div>
 
             <div>
-              <label className="block mb-1 font-medium text-gray-700">Message</label>
+              <label className="block mb-1 font-medium text-gray-700">
+                {t.message}
+              </label>
               <textarea
                 name="message"
                 required
@@ -90,7 +109,6 @@ export default function Contact() {
               />
             </div>
 
-            {/* reCAPTCHA */}
             <ReCAPTCHA
               sitekey={import.meta.env.VITE_ReCAPTCHA_SITE_KEY}
               onChange={handleCaptcha}
@@ -101,7 +119,7 @@ export default function Contact() {
               type="submit"
               className="bg-indigo-600 text-white px-6 py-2 rounded hover:bg-indigo-700 transition"
             >
-              Send Message
+              {t.submit}
             </button>
           </form>
         )}

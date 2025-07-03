@@ -1,0 +1,106 @@
+{
+    "footer": {
+        "subscribeHeading": "Abonnez-vous à notre newsletter",
+        "emailPlaceholder": "Votre e-mail",
+        "subscribeButton": "S'abonner",
+        "privacy": "Politique de confidentialité",
+        "terms": "Conditions d'utilisation",
+        "contact": "Contact",
+        "copyright": "Tous droits réservés."
+    },
+    "hero": {
+        "title": "Améliorez votre style avec des équipements modernes",
+        "description": "Découvrez notre collection de produits haute performance, conçus pour le confort, le style et l'aventure quotidienne.",
+        "button": "Acheter"
+    },
+    "reviews": {
+        "title": "Lo que dicen nuestros clientes",
+        "testimonials": [
+            {
+                "name": "Sarah M.",
+                "image": "https://randomuser.me/api/portraits/women/68.jpg",
+                "review": "¡Me encanta la calidad! El envío fue muy rápido y el ajuste es perfecto. Definitivamente compraré de nuevo."
+            },
+            {
+                "name": "James P.",
+                "image": "https://randomuser.me/api/portraits/men/35.jpg",
+                "review": "¡Gran experiencia! El sitio es fluido e intuitivo. El servicio al cliente también fue muy servicial."
+            },
+            {
+                "name": "Emily R.",
+                "image": "https://randomuser.me/api/portraits/women/12.jpg",
+                "review": "Elegante y cómodo — justo lo que buscaba. El diseño se siente premium y bien hecho."
+            }
+        ]
+    },
+    "navbar": {
+        "home": "Accueil",
+        "products": "Produits",
+        "about": "À propos",
+        "contact": "Contact",
+        "cart": "Panier",
+        "men": "Hommes",
+        "women": "Femmes"
+    },
+    "cart": {
+        "title": "Votre Panier",
+        "empty": "Votre panier est vide.",
+        "goShopping": "Faire du shopping →",
+        "remove": "Retirer",
+        "congrats": "Félicitations ! Vous avez débloqué",
+        "freeShipping": "la livraison gratuite",
+        "spendMore": "Dépensez",
+        "moreToFreeShipping": "de plus pour obtenir",
+        "total": "Total :",
+        "checkout": "Passer à la caisse",
+        "checkoutSuccess": "Achat réussi (simulation) !"
+    },
+    "contact": {
+        "title": "Service Client",
+        "name": "Nom",
+        "email": "E-mail",
+        "message": "Message",
+        "submit": "Envoyer le message",
+        "thankYou": "Merci ! Nous vous répondrons sous peu.",
+        "captchaAlert": "Veuillez compléter le reCAPTCHA."
+    },
+    "notFound": {
+        "title": "404 - Page non trouvée",
+        "message": "Désolé, la page que vous recherchez n'existe pas.",
+        "home": "Retour à l'accueil"
+    },
+    "productDetails": {
+        "back": "← Retour aux produits",
+        "loading": "Chargement du produit...",
+        "addToCart": "Ajouter au panier"
+    },
+    "about": {
+        "title": "À propos de nous",
+        "intro": [
+            "Bienvenue chez <strong>Modern Threads</strong> votre destination pour la mode de qualité, soigneusement sélectionnée pour hommes et femmes. Nous croyons que les vêtements ne doivent pas seulement être beaux, mais aussi agréables à porter.",
+            "Fondée en 2024, notre objectif est de rendre le style premium accessible, durable et simple à acheter. Que vous vous habilliez pour une soirée ou que vous restiez confortable à la maison, chaque pièce est conçue pour la polyvalence et la confiance en soi.",
+            "Notre vitrine est plus qu’un simple catalogue de produits, c’est une démo e-commerce entièrement responsive, développée avec des outils modernes comme <strong>React, Tailwind CSS, React Router</strong> et hébergée sur <strong>Vercel</strong>. Cette plateforme met en avant ma réflexion sur le design, l’architecture frontend, et l’expérience utilisateur.",
+            "Ce projet reflète ma passion pour un code propre, un design axé sur la performance, et des expériences clients agréables."
+        ],
+        "valuesTitle": "Nos valeurs",
+        "values": [
+            "Un style qui vous ressemble",
+            "Durabilité et approvisionnement éthique",
+            "Simplicité, accessibilité & convivialité",
+            "Conçu avec une approche axée sur la performance"
+        ]
+    },
+    "products": {
+        "title": {
+            "all": "Tous les produits",
+            "men": "Produits pour hommes",
+            "women": "Produits pour femmes"
+        },
+        "filters": {
+            "all": "Tous",
+            "men": "Hommes",
+            "women": "Femmes"
+        },
+        "loading": "Chargement des produits..."
+    }
+}

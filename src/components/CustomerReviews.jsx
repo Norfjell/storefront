@@ -1,34 +1,23 @@
 import React from "react";
+import { useLanguage } from "../context/LanguageContext";
+import en from "../locales/en.json";
+import fr from "../locales/fr.json";
+import es from "../locales/es.json";
 
-const testimonials = [
-  {
-    name: "Sarah M.",
-    image: "https://randomuser.me/api/portraits/women/68.jpg",
-    review:
-      "Absolutely love the quality! Shipping was super fast and the fit is perfect. Will definitely buy again.",
-  },
-  {
-    name: "James P.",
-    image: "https://randomuser.me/api/portraits/men/35.jpg",
-    review:
-      "Great experience! The site is smooth and intuitive. The customer service team was also very helpful.",
-  },
-  {
-    name: "Emily R.",
-    image: "https://randomuser.me/api/portraits/women/12.jpg",
-    review:
-      "Stylish and comfortable — just what I was looking for. The design feels premium and well-made.",
-  },
-];
 
 export default function CustomerReviews() {
+  const { language } = useLanguage();
+  const translations = { en, fr, es };
+  const localizedTestimonials = translations[language]?.reviews?.testimonials || translations.en.reviews.testimonials;
+  const title = translations[language]?.reviews?.title || translations.en.reviews.title;
+
   return (
     <div className="bg-gray-50 py-16 px-4 sm:px-6 lg:px-8">
       <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">
-        What Our Customers Are Saying
+        {title}
       </h2>
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
-        {testimonials.map((t, i) => (
+        {localizedTestimonials.map((t, i) => (
           <div
             key={i}
             className="bg-white p-6 rounded-lg shadow hover:shadow-md transition"

@@ -1,50 +1,98 @@
 [
   {
     "id": 1,
-    "name": "Running Shoes",
-    "description": "Comfortable and stylish running shoes.",
+    "name": {
+      "en": "Running Shoes",
+      "fr": "Chaussures de course",
+      "es": "Zapatillas para correr"
+    },
+    "description": {
+      "en": "Comfortable and stylish running shoes.",
+      "fr": "Chaussures de course confortables et élégantes.",
+      "es": "Zapatillas cómodas y con estilo para correr."
+    },
     "price": 89.99,
     "category": "men",
     "image": "/images/shoes.jpg"
   },
   {
     "id": 2,
-    "name": "Workout T-Shirt",
-    "description": "Breathable fabric for workouts.",
+    "name": {
+      "en": "Workout T-Shirt",
+      "fr": "T-shirt d'entraînement",
+      "es": "Camiseta de entrenamiento"
+    },
+    "description": {
+      "en": "Breathable fabric for workouts.",
+      "fr": "Tissu respirant pour les entraînements.",
+      "es": "Tejido transpirable para entrenamientos."
+    },
     "price": 29.99,
     "category": "men",
     "image": "/images/tshirt.jpg"
   },
   {
     "id": 3,
-    "name": "Backpack",
-    "description": "Durable and spacious backpack for travel.",
+    "name": {
+      "en": "Backpack",
+      "fr": "Sac à dos",
+      "es": "Mochila"
+    },
+    "description": {
+      "en": "Durable and spacious backpack for travel.",
+      "fr": "Sac à dos durable et spacieux pour voyager.",
+      "es": "Mochila duradera y espaciosa para viajar."
+    },
     "price": 49.99,
     "category": "women",
     "image": "/images/backpack.jpg"
   },
   {
     "id": 4,
-    "name": "Running Shoes",
-    "description": "Comfortable and stylish running shoes.",
+    "name": {
+      "en": "Running Shoes",
+      "fr": "Chaussures de course",
+      "es": "Zapatillas para correr"
+    },
+    "description": {
+      "en": "Comfortable and stylish running shoes.",
+      "fr": "Chaussures de course confortables et élégantes.",
+      "es": "Zapatillas cómodas y con estilo para correr."
+    },
     "price": 89.99,
-    "category": "women",
+    "category": "men",
     "image": "/images/shoes.jpg"
   },
   {
     "id": 5,
-    "name": "Workout T-Shirt",
-    "description": "Breathable fabric for workouts.",
+    "name": {
+      "en": "Workout T-Shirt",
+      "fr": "T-shirt d'entraînement",
+      "es": "Camiseta de entrenamiento"
+    },
+    "description": {
+      "en": "Breathable fabric for workouts.",
+      "fr": "Tissu respirant pour les entraînements.",
+      "es": "Tejido transpirable para entrenamientos."
+    },
     "price": 29.99,
-    "category": "women",
+    "category": "men",
     "image": "/images/tshirt.jpg"
   },
   {
     "id": 6,
-    "name": "Backpack",
-    "description": "Durable and spacious backpack for travel.",
+    "name": {
+      "en": "Backpack",
+      "fr": "Sac à dos",
+      "es": "Mochila"
+    },
+    "description": {
+      "en": "Durable and spacious backpack for travel.",
+      "fr": "Sac à dos durable et spacieux pour voyager.",
+      "es": "Mochila duradera y espaciosa para viajar."
+    },
     "price": 49.99,
-    "category": "men",
+    "category": "women",
     "image": "/images/backpack.jpg"
   }
 ]
