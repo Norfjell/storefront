@@ -102,5 +102,8 @@
             "women": "Mujeres"
         },
         "loading": "Cargando productos..."
+    },
+    "carousel": {
+        "title": "Productos recomendados"
     }
 }

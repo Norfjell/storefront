@@ -2,9 +2,16 @@ import { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
 import ProductCard from "./ProductCard";
+import en from "../locales/en.json";
+import fr from "../locales/fr.json";
+import es from "../locales/es.json";
+import { useLanguage } from "../context/LanguageContext";
 
 export default function ProductCarousel() {
   const [products, setProducts] = useState([]);
+  const translations = { en, fr, es };
+  const { language } = useLanguage();
+  const t = translations[language]?.carousel || translations.en.carousel;
 
   useEffect(() => {
     fetch("/products.json")
@@ -15,7 +22,7 @@ export default function ProductCarousel() {
   return (
     <section className="py-12">
       <h2 className="text-3xl font-bold mb-6 text-center text-gray-800">
-        Recommended Products
+         {t.title}
       </h2>
 
       {products.length > 0 ? (
