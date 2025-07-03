@@ -66,6 +66,54 @@
   {
     "id": 5,
     "name": {
+      "en": "Denim Jacket",
+      "fr": "Veste en jean",
+      "es": "Chaqueta vaquera"
+    },
+    "description": {
+      "en": "Classic denim jacket for everyday wear.",
+      "fr": "Veste en jean classique pour un usage quotidien.",
+      "es": "Chaqueta vaquera clásica para el uso diario."
+    },
+    "price": 69.99,
+    "category": "women",
+    "image": "/images/denim-jacket.jpg"
+  },
+  {
+    "id": 6,
+    "name": {
+      "en": "Sports Watch",
+      "fr": "Montre de sport",
+      "es": "Reloj deportivo"
+    },
+    "description": {
+      "en": "Water-resistant watch with fitness tracking features.",
+      "fr": "Montre résistante à l'eau avec fonctions de suivi de fitness.",
+      "es": "Reloj resistente al agua con funciones de seguimiento físico."
+    },
+    "price": 119.99,
+    "category": "men",
+    "image": "/images/sports-watch.jpg"
+  },
+  {
+    "id": 7,
+    "name": {
+      "en": "Yoga Pants",
+      "fr": "Pantalon de yoga",
+      "es": "Pantalones de yoga"
+    },
+    "description": {
+      "en": "Flexible and comfortable pants ideal for yoga and training.",
+      "fr": "Pantalon flexible et confortable idéal pour le yoga et l'entraînement.",
+      "es": "Pantalones flexibles y cómodos ideales para yoga y entrenamiento."
+    },
+    "price": 39.99,
+    "category": "women",
+    "image": "/images/yoga-pants.jpg"
+  },
+  {
+    "id": 8,
+    "name": {
       "en": "Workout T-Shirt",
       "fr": "T-shirt d'entraînement",
       "es": "Camiseta de entrenamiento"
@@ -80,7 +128,7 @@
     "image": "/images/tshirt.jpg"
   },
   {
-    "id": 6,
+    "id": 9,
     "name": {
       "en": "Backpack",
       "fr": "Sac à dos",
