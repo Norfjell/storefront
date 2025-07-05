@@ -1,6 +1,7 @@
 import { useCart } from "../context/CartContext";
 import { useLanguage } from "../context/LanguageContext";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 import en from "../locales/en.json";
 import fr from "../locales/fr.json";
@@ -14,19 +15,44 @@ export default function CartPage() {
     removeFromCart,
     increaseQty,
     decreaseQty,
-    clearCart,
   } = useCart();
   const { language } = useLanguage();
-  const t = translations[language]?.cart || translations.en.cart;
+  const currentLang = translations[language] ?? translations.en;
+  const t = currentLang.cart ?? translations.en.cart;
 
   const total = cartItems.reduce(
     (sum, item) => sum + item.price * item.quantity,
     0
   );
 
-  const handleCheckout = () => {
-    alert(t.checkoutSuccess);
-    clearCart();
+  const [loading, setLoading] = useState(false);
+  console.log(cartItems);
+
+  const handleCheckout = async () => {
+    if (cartItems.length === 0) return; // guard if cart empty
+
+    setLoading(true);
+
+    try {
+      const res = await fetch("http://localhost:4242/create-checkout-session", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ cartItems }),
+      });
+
+      const data = await res.json();
+
+      if (data.url) {
+        window.location.href = data.url; // redirect to Stripe checkout
+      } else {
+        alert(t.checkoutError || "Failed to create checkout session");
+        setLoading(false);
+      }
+    } catch (error) {
+      console.error(error);
+      alert(t.checkoutError || "Checkout error");
+      setLoading(false);
+    }
   };
 
   return (
@@ -49,11 +75,11 @@ export default function CartPage() {
             >
               <img
                 src={item.image}
-                alt={item.name}
+                alt={item.name[language] || item.name.en}
                 className="w-20 h-20 object-contain bg-gray-100"
               />
               <div className="flex-1">
-                <h2 className="text-lg font-semibold">{item.name}</h2>
+                <h2 className="text-lg font-semibold">{item.name[language] || item.name.en}</h2>
                 <p className="text-gray-500">${item.price.toFixed(2)}</p>
 
                 <div className="flex items-center mt-2 space-x-2">
@@ -104,9 +130,10 @@ export default function CartPage() {
           <div className="text-right">
             <button
               onClick={handleCheckout}
-              className="mt-4 px-6 py-2 bg-indigo-600 text-white rounded hover:bg-indigo-700"
+              className="mt-4 px-6 py-2 bg-indigo-600 text-white rounded hover:bg-indigo-700 disabled:opacity-50"
+              disabled={loading}
             >
-              {t.checkout}
+              {loading ? t.loading || "Processing..." : t.checkout}
             </button>
           </div>
         </div>

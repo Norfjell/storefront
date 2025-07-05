@@ -8,6 +8,7 @@ import NotFound from "./pages/NotFound";
 import CartPage from "./pages/CartPage";
 import Contact from "./pages/Contact";
 import About from "./pages/About";
+import SuccessPage from "./pages/SuccessPage";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/about" element={<About />} />
         <Route path="/cart" element={<CartPage />} />
+        <Route path="/success" element={<SuccessPage />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       </main>

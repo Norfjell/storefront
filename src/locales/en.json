@@ -104,6 +104,11 @@
         "loading": "Loading products..."
     },
     "carousel": {
-              "title": "Recommended Products"
+        "title": "Recommended Products"
+    },
+    "success": {
+        "thankYou": "Thank you for your purchase!",
+        "confirmation": "Your order was successful. A confirmation email has been sent to your inbox.",
+        "continueShopping": "Continue Shopping"
     }
 }

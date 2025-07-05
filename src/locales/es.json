@@ -105,5 +105,10 @@
     },
     "carousel": {
         "title": "Productos recomendados"
+    },
+    "success": {
+        "thankYou": "¡Gracias por su compra!",
+        "confirmation": "Su pedido fue exitoso. Se ha enviado un correo de confirmación a su bandeja de entrada.",
+        "continueShopping": "Seguir comprando"
     }
 }
