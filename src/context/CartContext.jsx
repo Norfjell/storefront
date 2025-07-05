@@ -63,8 +63,8 @@ export function CartProvider({ children }) {
     };
 
     const clearCart = () => {
-        toast.success("Checkout complete!");
-        setCartItems([]);
+        setCartItems([]); // Clear state
+        localStorage.removeItem("cart"); // Optional
     };
 
     return (
