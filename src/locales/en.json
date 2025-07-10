@@ -42,7 +42,8 @@
         "men": "Men",
         "women": "Women",
         "menuOpen": "Open menu",
-        "menuClose": "Close menu"
+        "menuClose": "Close menu",
+        "languageLabel": "Language selector"
     },
     "cart": {
         "title": "Your Cart",
