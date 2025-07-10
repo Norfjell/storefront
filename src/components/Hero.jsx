@@ -1,16 +1,13 @@
 import { Link } from "react-router-dom";
-import heroImage from "../assets/hero-image.jpg";
+import heroImageWebp from "../assets/hero-image-optimized.webp";
 import { useLanguage } from "../context/LanguageContext";
 import en from "../locales/en.json";
 import fr from "../locales/fr.json";
 import es from "../locales/es.json";
 
-
 export default function Hero() {
   const { language } = useLanguage();
-
   const translations = { en, fr, es };
-
   const t = translations[language]?.hero || translations.en.hero;
 
   return (
@@ -33,8 +30,11 @@ export default function Hero() {
         {/* Image Section */}
         <div className="flex-1">
           <img
-            src={heroImage}
+            src={heroImageWebp}
             alt="Hero"
+            loading="lazy"
+            width="600"
+            height="400"
             className="w-full max-h-[400px] object-cover rounded-lg shadow-md"
           />
         </div>
