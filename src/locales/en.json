@@ -40,7 +40,9 @@
         "contact": "Contact",
         "cart": "Cart",
         "men": "Men",
-        "women": "Women"
+        "women": "Women",
+        "menuOpen": "Open menu",
+        "menuClose": "Close menu"
     },
     "cart": {
         "title": "Your Cart",
