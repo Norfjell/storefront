@@ -36,13 +36,18 @@ export default function Navbar() {
           <Link to="/contact" className="hover:text-indigo-500">{t.contact}</Link>
           <Link to="/cart" className="flex items-center hover:text-indigo-500 relative">
             <FaShoppingCart className="text-2xl" />
+            <span className="sr-only">{t.cart}</span>
             {cartCount > 0 && (
               <span className="absolute -top-2 -right-3 bg-indigo-500 text-white text-xs font-semibold rounded-full px-2 py-0.5">
                 {cartCount}
               </span>
             )}
           </Link>
+          <label htmlFor="language-select" className="sr-only">
+            {t.languageLabel || "Select language"}
+          </label>
           <select
+            id="language-select"
             value={language}
             onChange={(e) => setLanguage(e.target.value)}
             className="border rounded px-2 py-1 text-sm focus:outline-none"
@@ -80,15 +85,24 @@ export default function Navbar() {
           <Link to="/products/women" className="block hover:text-indigo-500">{t.women}</Link>
           <Link to="/about" className="block hover:text-indigo-500">{t.about}</Link>
           <Link to="/contact" className="block hover:text-indigo-500">{t.contact}</Link>
-          <Link to="/cart" className="flex items-center hover:text-indigo-500 relative">
+          <Link
+            to="/cart"
+            className="flex items-center hover:text-indigo-500 relative"
+            aria-label={t.cart}
+          >
             <FaShoppingCart className="text-2xl" />
+            <span className="sr-only">{t.cart}</span> {/* Screen reader text */}
             {cartCount > 0 && (
-              <span className="absolute -top-2 left-3 bg-indigo-500 text-white text-xs font-semibold rounded-full px-2 py-0.5">
+              <span className="absolute -top-2 -right-3 bg-indigo-500 text-white text-xs font-semibold rounded-full px-2 py-0.5">
                 {cartCount}
               </span>
             )}
           </Link>
+          <label htmlFor="language-select" className="sr-only">
+            {t.languageLabel || "Select language"}
+          </label>
           <select
+            id="language-select"
             value={language}
             onChange={(e) => setLanguage(e.target.value)}
             className="border rounded px-2 py-1 text-sm focus:outline-none"
