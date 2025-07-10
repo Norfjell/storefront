@@ -39,8 +39,10 @@
         "about": "Acerca de",
         "contact": "Contacto",
         "cart": "Carrito",
-        "men": "Hombres",
-        "women": "Mujeres"
+        "men": "Hombre",
+        "women": "Mujer",
+        "menuOpen": "Abrir menú",
+        "menuClose": "Cerrar menú"
     },
     "cart": {
         "title": "Tu Carrito",

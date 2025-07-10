@@ -39,8 +39,10 @@
         "about": "À propos",
         "contact": "Contact",
         "cart": "Panier",
-        "men": "Hommes",
-        "women": "Femmes"
+        "men": "Homme",
+        "women": "Femme",
+        "menuOpen": "Ouvrir le menu",
+        "menuClose": "Fermer le menu"
     },
     "cart": {
         "title": "Votre Panier",

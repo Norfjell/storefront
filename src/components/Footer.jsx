@@ -40,13 +40,13 @@ export default function Footer() {
 
         {/* Social Icons */}
         <div className="flex items-center space-x-4 justify-start md:justify-end">
-          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:text-pink-500">
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="hover:text-pink-500">
             <FaInstagram size={24} />
           </a>
-          <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="hover:text-red-500">
+          <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube" className="hover:text-red-500">
             <FaYoutube size={24} />
           </a>
-          <a href="https://strava.com" target="_blank" rel="noopener noreferrer" className="hover:text-orange-400">
+          <a href="https://strava.com" target="_blank" rel="noopener noreferrer" aria-label="Strava" className="hover:text-orange-400">
             <FaStrava size={24} />
           </a>
         </div>
